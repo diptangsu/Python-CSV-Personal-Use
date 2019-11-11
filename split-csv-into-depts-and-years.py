@@ -1,29 +1,34 @@
 import csv
 
 input_file = open('input/Python Skill Development Programme Registration FINAL.csv', 'r')
-number_of_students = open('outputs/Number of Students.txt', 'w')
+number_of_students = open('csv-outputs/Number of Students.txt', 'w')
 
 depts = ['CSE', 'IT', 'ECE', 'EIE', 'EE', 'ME', 'MCA']
 years = 4
 
 # stores the csv writers for each file.
-writer = [
+output = [
     [
-        csv.writer(
-            open(f'outputs/Year {i + 1} Dept {dept}.csv', 'w')
-        )
+        open(f'csv-outputs/Year {i + 1} Dept {dept}.csv', 'w')
         for dept in depts
     ] 
     for i in range(years)
 ]
 
 
+# files for all departments for all years
+writer = [
+    [
+        csv.writer(f)
+        for f in row
+    ]
+    for row in output
+]
+
+
 # stores number of student per stream per year.
 counter_of_students = [
-    [
-        0 
-        for j in range(no_of_depts)
-    ] 
+    [0] * len(depts) 
     for i in range(years)
 ]
 
@@ -50,5 +55,5 @@ for i in range(years):
 number_of_students.close()
 input_file.close()
 for i in range(years):
-	for j in range(no_of_depts):
+	for j in range(len(depts)):
 		output[i][j].close()
