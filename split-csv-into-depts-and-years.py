@@ -4,15 +4,16 @@ input_file = open('input/Python Skill Development Programme Registration FINAL.c
 number_of_students = open('outputs/Number of Students.txt', 'w')
 
 depts = ['CSE', 'IT', 'ECE', 'EIE', 'EE', 'ME', 'MCA']
-no_of_depts = len(depts)
-
 years = 4
 
-# stores the output file paths for each dept for every year.
-output = [[[] for j in range(no_of_depts)] for i in range(years)]
-for i in range(years):
-	for j, dept in enumerate(depts):
-		output[i][j] = open(f'outputs/Year {i + 1} Dept {dept}.csv', 'w')
+# stores the output files for each dept for every year.
+output = [
+    [
+        open(f'outputs/Year {i + 1} Dept {dept}.csv', 'w')
+        for j, dept in enumerate(depts)
+    ] 
+    for i in range(years)
+]
 
 # stores the csv writers for each file.
 writer = [[[] for j in range(no_of_depts)] for i in range(years)]
