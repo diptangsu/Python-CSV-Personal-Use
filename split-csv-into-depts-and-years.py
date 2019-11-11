@@ -6,23 +6,26 @@ number_of_students = open('outputs/Number of Students.txt', 'w')
 depts = ['CSE', 'IT', 'ECE', 'EIE', 'EE', 'ME', 'MCA']
 years = 4
 
-# stores the output files for each dept for every year.
-output = [
+# stores the csv writers for each file.
+writer = [
     [
-        open(f'outputs/Year {i + 1} Dept {dept}.csv', 'w')
-        for j, dept in enumerate(depts)
+        csv.writer(
+            open(f'outputs/Year {i + 1} Dept {dept}.csv', 'w')
+        )
+        for dept in depts
     ] 
     for i in range(years)
 ]
 
-# stores the csv writers for each file.
-writer = [[[] for j in range(no_of_depts)] for i in range(years)]
-for i in range(years):
-	for j in range(no_of_depts):
-		writer[i][j] = csv.writer(output[i][j])
 
 # stores number of student per stream per year.
-counter_of_students = [[0 for j in range(no_of_depts)] for i in range(years)]
+counter_of_students = [
+    [
+        0 
+        for j in range(no_of_depts)
+    ] 
+    for i in range(years)
+]
 
 for row in csv.reader(input_file):
 	if row[4][0] == 'Y':
