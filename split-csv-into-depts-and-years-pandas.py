@@ -11,7 +11,7 @@ file['Year'] = file['Year'].apply(lambda y: int(y[0]))
 output_dfs = [
     [
         (
-            "Year-{i}-{dept}".format(i=i+1, dept=dept),
+            f'Year-{i + 1}-{dept}',
             file[(file['Year'] == i+1) & (file['Department'] == dept)]
         )
         for dept in depts
@@ -21,4 +21,4 @@ output_dfs = [
 
 for row in output_dfs:
     for filename, df in row:
-        df.to_csv(Path('pandas-outputs') / f'{filename}.csv')
+        df.to_csv(f'pandas-outputs\\{filename}.csv')
