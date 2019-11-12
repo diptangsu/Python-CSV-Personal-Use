@@ -1,40 +1,5 @@
-Year 1
-CSE	-> 30 students
-IT	-> 26 students
-ECE	-> 30 students
-EIE	-> 6 students
-EE	-> 19 students
-ME	-> 25 students
-MCA	-> 16 students
-Total = 152 students
-
-Year 2
-CSE	-> 54 students
-IT	-> 25 students
-ECE	-> 31 students
-EIE	-> 13 students
-EE	-> 18 students
-ME	-> 8 students
-MCA	-> 11 students
-Total = 160 students
-
-Year 3
-CSE	-> 30 students
-IT	-> 20 students
-ECE	-> 26 students
-EIE	-> 3 students
-EE	-> 8 students
-ME	-> 38 students
-MCA	-> 2 students
-Total = 127 students
-
-Year 4
-CSE	-> 5 students
-IT	-> 0 students
-ECE	-> 13 students
-EIE	-> 2 students
-EE	-> 0 students
-ME	-> 0 students
-MCA	-> 0 students
-Total = 20 students
-
+Year 1: CSE	->  30 studentsYear 1: IT	->  26 studentsYear 1: ECE	->  30 studentsYear 1: EIE	->   6 studentsYear 1: EE	->  19 studentsYear 1: ME	->  25 studentsYear 1: MCA	->  16 students
+Year 2: CSE	->  54 studentsYear 2: IT	->  25 studentsYear 2: ECE	->  31 studentsYear 2: EIE	->  13 studentsYear 2: EE	->  18 studentsYear 2: ME	->   8 studentsYear 2: MCA	->  11 students
+Year 3: CSE	->  30 studentsYear 3: IT	->  20 studentsYear 3: ECE	->  26 studentsYear 3: EIE	->   3 studentsYear 3: EE	->   8 studentsYear 3: ME	->  38 studentsYear 3: MCA	->   2 students
+Year 4: CSE	->   5 studentsYear 4: IT	->   0 studentsYear 4: ECE	->  13 studentsYear 4: EIE	->   2 studentsYear 4: EE	->   0 studentsYear 4: ME	->   0 studentsYear 4: MCA	->   0 students
+Total Students: 459
